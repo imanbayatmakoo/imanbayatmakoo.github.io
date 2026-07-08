@@ -1,144 +1,217 @@
 {
   "meta": {
-    "siteTitle": "Iman | Product Manager",
-    "accentNote": "This file is the single source of truth. Edit it, push, and the site updates. Anything marked TODO is a placeholder for you to replace."
+    "siteTitle": "Iman Bayat Makoo — Product Manager",
+    "accentNote": "Single source of truth. Edit → commit → site updates."
   },
   "basics": {
-    "name": "Iman",
+    "name": "Iman Bayat Makoo",
     "headline": "Senior Product Manager",
     "company": "Tabdeal",
-    "tagline": "Quant/Systems PM with a builder's bias",
-    "photo": "assets/photo.jpg",
+    "tagline": "Liquidity, exchange automation, and the metrics that prove impact",
+    "photo": "",
     "summary": [
-      "I lead the Market Maker squad at Tabdeal, one of Iran's largest crypto exchanges, where I ship algorithmic market-making systems, exchange automation, and the analytics that prove they work.",
-      "TODO: second paragraph — your personal angle. Example: what energizes you (mechanism design, experiments, data), how you work with engineers, what you tinker with off-hours."
+      "Product Manager with 4+ years across fintech and consumer platforms, now specializing in crypto exchange and market-making at Tabdeal. I lead a squad of 5+ backend engineers and partner directly with C-suite and shareholders to improve liquidity quality, automate exchange operations, and contain financial risk.",
+      "I lifted market-maker uptime 15% by re-architecting liquidity around VWAP-based quality depth, and I engineer the proprietary metrics (Python, SQL, Metabase) that prove impact."
     ],
     "skillTags": [
       "Product Strategy",
       "Algorithmic Market Making",
-      "Quantitative Analytics",
-      "Mechanism Design",
-      "Agile Delivery",
+      "Quantitative Modeling",
+      "Exchange Automation",
+      "Squad Leadership",
       "AI Tooling"
     ],
-    "availability": "TODO: e.g. Open to senior PM roles in fintech and crypto.",
+    "availability": "Want to talk markets, market making, or product? Reach out.",
     "contact": {
-      "email": "TODO@example.com",
-      "linkedin": "https://www.linkedin.com/in/TODO",
-      "github": "https://github.com/TODO",
+      "email": "ibayatmakoo1992@gmail.com",
+      "phone": "",
+      "linkedin": "https://www.linkedin.com/in/iman-bayat-makoo/",
+      "github": "https://github.com/imanbayatmakoo",
       "telegram": ""
     },
-    "resumePdf": "assets/resume.pdf"
+    "resumePdf": ""
   },
   "experience": [
     {
-      "company": "Tabdeal",
-      "logo": "",
-      "title": "Senior Product Manager · Market Maker Squad Lead",
-      "start": "TODO 2023",
+      "company": "Tabdeal Crypto Exchange",
+      "title": "Senior Product Manager — Market Maker Squad Lead",
+      "start": "Nov 2024",
       "end": "Present",
-      "location": "Tehran, Iran",
-      "bullets": [
-        "TODO: Lead the MM squad (back-end engineers + 1 APM) owning algorithmic market-making across spot markets.",
-        "TODO: Shipped the PCM engine / Non-Hedge MM / Multi-Agentic MM — one line each on scope and outcome.",
-        "TODO: Built the Delist Automation program end to end, from churn analysis to automated execution.",
-        "TODO: One bullet on leadership: delegation to APM, workstream ownership, exec communication."
+      "location": "Tehran, IR",
+      "sections": [
+        {
+          "heading": "Revenue, Pricing & Growth",
+          "bullets": [
+            "Owned end-to-end development of a proprietary market-making algorithm — from hypothesis through quantitative modeling, PRD, and cross-functional alignment across engineering, quant, and executive stakeholders — delivering a 60% revenue uplift validated in both backtesting and forward production tests."
+          ]
+        },
+        {
+          "heading": "Algorithmic Product & Quantitative Modeling",
+          "bullets": [
+            "Lifted market-maker uptime by 15% by leading the build of exchange-wide safety tooling: a price-source kill-switch, automated price-gap alerting, and futures-based hedging for grid bots.",
+            "Modeled 80% co-delisting correlation between crypto and stablecoin pairs across major venues, converting the finding into a 30-day protective buffer policy that pre-empts cascading delisting risk.",
+            "Audited OTC transaction data and discovered 80% of retail swap volume settled below a key threshold; designed a tiered fee-and-slippage framework that captured the high-velocity revenue band.",
+            "Built an algorithmic depth-clustering framework that scores order-book depth against top competitors and auto-alerts when our depth skew drops below 20%.",
+            "Designed volatility-adaptive spread logic in the valuation engine so spreads scale to live market conditions without manual overrides."
+          ]
+        },
+        {
+          "heading": "Data-Driven Innovation, Automation, Tooling & AI",
+          "bullets": [
+            "Delist Efficiency Score (DES): engineered a proprietary scoring system using Python-based data mining to quantify the operational performance of the asset delisting lifecycle.",
+            "Owned the master PRD and cross-functional dependencies for an end-to-end delist automation engine, eliminating redundant manual workflows and systemic risks across the delisting and listing pipeline — leading to a 30% decrease in users' delist complaints.",
+            "Prototyped LLM integration into quantitative workflows, using customized AI agents to accelerate global asset surveillance and competitor monitoring.",
+            "Built a Python surveillance bot scraping global exchange announcements, cutting the squad's response time to international delisting events from 3 hr on average to 15 min.",
+            "Engineered a Python ETL pipeline that parses, consolidates, and pushes user activation and trade data into central reporting — removing recurring manual reporting work for leadership."
+          ]
+        },
+        {
+          "heading": "Crisis Response & Risk Management",
+          "bullets": [
+            "Led the postmortem of a major venue asset-freeze incident, securing full corporate absorption of the exposure so retail users took zero liquidation loss.",
+            "Convened a cross-CTO alignment summit with infrastructure leads to resolve root causes behind systemic failures, standardizing cross-departmental accountability for future incidents."
+          ]
+        },
+        {
+          "heading": "Squad Leadership & Stakeholder Management",
+          "bullets": [
+            "Recruited and onboarded an Associate Product Manager; authored the technical curriculum covering P&L logic, matching-engine mechanics, and cohort vs. rolling-window retention analysis.",
+            "Delegated end-to-end product ownership of the automated Grid Trading Bot and Inventory-Based Price Skewing to an APM as a structured succession milestone.",
+            "Established the squad knowledgebase, standardizing and automating shift reporting, operational checklists, and knowledge-transfer protocols."
+          ]
+        }
       ],
       "metrics": [
-        { "label": "TODO Spread on key pairs", "before": "80 bps", "after": "35 bps", "direction": "down" },
-        { "label": "TODO Delist handling time", "before": "6 d", "after": "1 d", "direction": "down" },
-        { "label": "TODO MM uptime", "before": "97%", "after": "99.9%", "direction": "up" }
+        { "label": "MM algorithm revenue (backtest + production)", "value": "+60%", "direction": "up" },
+        { "label": "Market-maker uptime", "value": "+15%", "direction": "up" },
+        { "label": "Response time to intl. delisting events", "before": "3 hr", "after": "15 min", "direction": "down" },
+        { "label": "User delist complaints", "value": "−30%", "direction": "down" }
       ]
     },
     {
-      "company": "TODO Previous company (e.g. Bit24)",
-      "logo": "",
-      "title": "TODO Title",
-      "start": "TODO",
-      "end": "TODO",
-      "location": "",
+      "company": "Hamrah Avval (MCI)",
+      "title": "Product Manager",
+      "start": "Jan 2024",
+      "end": "Nov 2024",
+      "location": "Tehran, IR",
       "bullets": [
-        "TODO bullet",
-        "TODO bullet"
+        "Owned product strategy, pricing logic, and user-growth modeling for three B2B/IoT products: Connected Car, Heavy Fleet Management, and Cloud Surveillance.",
+        "Authored commercialization documents, operating-process maps, and revenue forecasts; drove cross-functional delivery with software and hardware-build teams.",
+        "Conducted domestic and international market studies to inform positioning and GTM."
       ],
       "metrics": []
     },
     {
-      "company": "TODO Earlier (Hamrah Avval / Arnika.ai / CafeBazaar)",
-      "logo": "",
-      "title": "TODO Title",
-      "start": "TODO",
-      "end": "TODO",
-      "location": "",
+      "company": "Bit24 Crypto Exchange",
+      "title": "Product Marketing Manager",
+      "start": "Oct 2022",
+      "end": "Jan 2023",
+      "location": "Tehran, IR",
       "bullets": [
-        "TODO bullet"
+        "Ran competitive analysis and user segmentation that shaped acquisition targeting and product-marketing positioning for an early-stage Iranian crypto exchange."
       ],
       "metrics": []
+    },
+    {
+      "company": "Arnika.ai",
+      "title": "Product Manager",
+      "start": "Feb 2021",
+      "end": "Oct 2022",
+      "location": "Tehran, IR",
+      "bullets": [
+        "Owned end-to-end product for the LOEMS platform, including feature research, business-model design, and go-to-market positioning for an institutional execution tool."
+      ],
+      "metrics": []
+    },
+    {
+      "company": "CafeBazaar",
+      "title": "Key Account Manager",
+      "start": "Dec 2020",
+      "end": "Apr 2021",
+      "location": "Tehran, IR",
+      "bullets": [
+        "Managed key international developer accounts at Iran's largest Android marketplace."
+      ],
+      "metrics": []
+    },
+    {
+      "company": "CafeBazaar",
+      "title": "Developers Support — SearchAds Specialist",
+      "start": "Oct 2019",
+      "end": "Dec 2020",
+      "location": "Tehran, IR",
+      "bullets": [
+        "Built a semi-RFM segmentation of developer accounts and used it to upsell SearchAds revenue by 250%."
+      ],
+      "metrics": [
+        { "label": "SearchAds revenue via RFM segmentation", "value": "+250%", "direction": "up" }
+      ]
     }
   ],
   "projects": {
-    "groups": ["Work", "Personal"],
+    "groups": ["Work"],
     "items": [
       {
         "group": "Work",
-        "name": "Delist Automation",
-        "blurb": "TODO: one line — automated token delisting pipeline with ROI measured via survival analysis and diff-in-diff.",
-        "image": "",
-        "tags": ["Automation", "Analytics", "Exchange Ops"]
+        "name": "Delist Monitor & Forwarding",
+        "blurb": "AI-assisted rapid prototyping of a Python alert system for international delisting events, giving the MM squad real-time intelligence on asset removals.",
+        "tags": ["Python", "AI Prototyping", "Surveillance"]
       },
       {
         "group": "Work",
-        "name": "Multi-Agentic Market Maker",
-        "blurb": "TODO: one line on the agentic MM architecture.",
-        "image": "",
-        "tags": ["Market Making", "Agents", "Quant"]
+        "name": "Operational Checklist Automation",
+        "blurb": "Automated tracking of the 30+ steps of asset delisting with real-time timestamping to ensure 100% compliance.",
+        "tags": ["Automation", "Exchange Ops", "Compliance"]
       },
       {
         "group": "Work",
-        "name": "Grid Bot",
-        "blurb": "TODO: one line.",
-        "image": "",
-        "tags": ["Market Making", "Retail Product"]
-      },
-      {
-        "group": "Personal",
-        "name": "Cross-Exchange Arbitrage Monitor",
-        "blurb": "TODO: one line — bot monitoring spreads across Iranian exchanges.",
-        "image": "",
-        "tags": ["Python", "Trading", "Bots"]
-      },
-      {
-        "group": "Personal",
-        "name": "Beatport → Spotify Telegram Bot",
-        "blurb": "TODO: one line.",
-        "image": "",
-        "tags": ["Telegram", "APIs", "Side Project"]
+        "name": "Wallet UI Transformation",
+        "blurb": "Dynamic \"pinned asset\" feature for user wallets during delisting events, significantly reducing customer friction and support tickets.",
+        "tags": ["UX", "Wallet", "Delisting"]
       }
     ]
   },
   "education": [
     {
-      "degree": "PhD in Finance–Banking (in progress)",
-      "school": "TODO University",
-      "years": "TODO – Present"
+      "degree": "Ph.D., Finance – Banking (in progress)",
+      "school": "IAU Science & Research Branch (SRBIAU)",
+      "years": "2023 – Present"
     },
     {
       "degree": "MBA, Finance",
       "school": "Amirkabir University of Technology",
-      "years": "TODO – TODO"
+      "years": "2018 – 2021"
     },
     {
-      "degree": "BSc, Computer Science",
-      "school": "TODO University",
-      "years": "TODO – TODO"
+      "degree": "B.Sc., Computer Science",
+      "school": "Shahid Beheshti University",
+      "years": "2011 – 2017"
     }
   ],
-  "certifications": [
-    { "name": "TODO Certification", "issuer": "TODO Issuer", "date": "TODO" }
+  "certifications": [],
+  "skills": [
+    {
+      "name": "Data & Automation",
+      "keywords": ["Python", "SQL", "Metabase", "Google Apps Script", "Data Mining", "API", "VBA"]
+    },
+    {
+      "name": "Product Tools",
+      "keywords": ["Roadmap Prioritization", "OKR", "PRD", "A/B Testing", "Cohort & Retention Analysis", "Knowledge Base Management"]
+    },
+    {
+      "name": "Leadership",
+      "keywords": ["Squad Management", "Stakeholder Management", "C-suite & Board Communication", "Postmortem Facilitation", "Negotiation", "Recruiting & Onboarding"]
+    },
+    {
+      "name": "AI Tooling",
+      "keywords": ["LLM Workflow Integration", "AI-Assisted Prototyping", "NotebookLM", "Rapid Prototyping"]
+    },
+    {
+      "name": "Platforms & Apps",
+      "keywords": ["Jira", "Trello", "Figma", "Google Analytics", "Obsidian", "Notion", "MS Office"]
+    }
   ],
-  "tools": [
-    "Jira", "Confluence", "Python", "SQL", "Excel", "Claude", "Figma", "Notion"
-  ],
+  "tools": [],
   "languages": [
     { "name": "English", "level": "Fluent (TOEFL 104)" },
     { "name": "Persian", "level": "Native" },
