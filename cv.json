@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "siteTitle": "Iman | Product Manager",
+    "accentNote": "This file is the single source of truth. Edit it, push, and the site updates. Anything marked TODO is a placeholder for you to replace."
+  },
+  "basics": {
+    "name": "Iman",
+    "headline": "Senior Product Manager",
+    "company": "Tabdeal",
+    "tagline": "Quant/Systems PM with a builder's bias",
+    "photo": "assets/photo.jpg",
+    "summary": [
+      "I lead the Market Maker squad at Tabdeal, one of Iran's largest crypto exchanges, where I ship algorithmic market-making systems, exchange automation, and the analytics that prove they work.",
+      "TODO: second paragraph — your personal angle. Example: what energizes you (mechanism design, experiments, data), how you work with engineers, what you tinker with off-hours."
+    ],
+    "skillTags": [
+      "Product Strategy",
+      "Algorithmic Market Making",
+      "Quantitative Analytics",
+      "Mechanism Design",
+      "Agile Delivery",
+      "AI Tooling"
+    ],
+    "availability": "TODO: e.g. Open to senior PM roles in fintech and crypto.",
+    "contact": {
+      "email": "TODO@example.com",
+      "linkedin": "https://www.linkedin.com/in/TODO",
+      "github": "https://github.com/TODO",
+      "telegram": ""
+    },
+    "resumePdf": "assets/resume.pdf"
+  },
+  "experience": [
+    {
+      "company": "Tabdeal",
+      "logo": "",
+      "title": "Senior Product Manager · Market Maker Squad Lead",
+      "start": "TODO 2023",
+      "end": "Present",
+      "location": "Tehran, Iran",
+      "bullets": [
+        "TODO: Lead the MM squad (back-end engineers + 1 APM) owning algorithmic market-making across spot markets.",
+        "TODO: Shipped the PCM engine / Non-Hedge MM / Multi-Agentic MM — one line each on scope and outcome.",
+        "TODO: Built the Delist Automation program end to end, from churn analysis to automated execution.",
+        "TODO: One bullet on leadership: delegation to APM, workstream ownership, exec communication."
+      ],
+      "metrics": [
+        { "label": "TODO Spread on key pairs", "before": "80 bps", "after": "35 bps", "direction": "down" },
+        { "label": "TODO Delist handling time", "before": "6 d", "after": "1 d", "direction": "down" },
+        { "label": "TODO MM uptime", "before": "97%", "after": "99.9%", "direction": "up" }
+      ]
+    },
+    {
+      "company": "TODO Previous company (e.g. Bit24)",
+      "logo": "",
+      "title": "TODO Title",
+      "start": "TODO",
+      "end": "TODO",
+      "location": "",
+      "bullets": [
+        "TODO bullet",
+        "TODO bullet"
+      ],
+      "metrics": []
+    },
+    {
+      "company": "TODO Earlier (Hamrah Avval / Arnika.ai / CafeBazaar)",
+      "logo": "",
+      "title": "TODO Title",
+      "start": "TODO",
+      "end": "TODO",
+      "location": "",
+      "bullets": [
+        "TODO bullet"
+      ],
+      "metrics": []
+    }
+  ],
+  "projects": {
+    "groups": ["Work", "Personal"],
+    "items": [
+      {
+        "group": "Work",
+        "name": "Delist Automation",
+        "blurb": "TODO: one line — automated token delisting pipeline with ROI measured via survival analysis and diff-in-diff.",
+        "image": "",
+        "tags": ["Automation", "Analytics", "Exchange Ops"]
+      },
+      {
+        "group": "Work",
+        "name": "Multi-Agentic Market Maker",
+        "blurb": "TODO: one line on the agentic MM architecture.",
+        "image": "",
+        "tags": ["Market Making", "Agents", "Quant"]
+      },
+      {
+        "group": "Work",
+        "name": "Grid Bot",
+        "blurb": "TODO: one line.",
+        "image": "",
+        "tags": ["Market Making", "Retail Product"]
+      },
+      {
+        "group": "Personal",
+        "name": "Cross-Exchange Arbitrage Monitor",
+        "blurb": "TODO: one line — bot monitoring spreads across Iranian exchanges.",
+        "image": "",
+        "tags": ["Python", "Trading", "Bots"]
+      },
+      {
+        "group": "Personal",
+        "name": "Beatport → Spotify Telegram Bot",
+        "blurb": "TODO: one line.",
+        "image": "",
+        "tags": ["Telegram", "APIs", "Side Project"]
+      }
+    ]
+  },
+  "education": [
+    {
+      "degree": "PhD in Finance–Banking (in progress)",
+      "school": "TODO University",
+      "years": "TODO – Present"
+    },
+    {
+      "degree": "MBA, Finance",
+      "school": "Amirkabir University of Technology",
+      "years": "TODO – TODO"
+    },
+    {
+      "degree": "BSc, Computer Science",
+      "school": "TODO University",
+      "years": "TODO – TODO"
+    }
+  ],
+  "certifications": [
+    { "name": "TODO Certification", "issuer": "TODO Issuer", "date": "TODO" }
+  ],
+  "tools": [
+    "Jira", "Confluence", "Python", "SQL", "Excel", "Claude", "Figma", "Notion"
+  ],
+  "languages": [
+    { "name": "English", "level": "Fluent (TOEFL 104)" },
+    { "name": "Persian", "level": "Native" },
+    { "name": "German", "level": "Intermediate" }
+  ]
+}

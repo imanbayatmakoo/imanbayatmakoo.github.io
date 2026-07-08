@@ -1,0 +1,336 @@
+/* ============================================================
+   DESIGN TOKENS — this block is the only place you need to edit
+   to re-skin the entire site.
+   ============================================================ */
+:root {
+  /* Palette — light "quant research note" theme */
+  --bg: #fbfaf7;            /* page background */
+  --surface: #ffffff;       /* cards */
+  --ink: #16211f;           /* primary text */
+  --ink-soft: #5a6763;      /* secondary text */
+  --line: #d9ded9;          /* hairlines and borders */
+  --accent: #0f4c81;        /* headings, links, active states */
+  --up: #0a7d4f;            /* positive metric delta (market green) */
+  --down: #b3372f;          /* negative metric delta (market red) */
+  --chip-bg: #eef1ec;       /* tag chips */
+
+  /* Type */
+  --font-display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Scale + rhythm */
+  --max-width: 960px;
+  --radius: 4px;
+  --section-gap: 5rem;
+}
+
+/* Dark "terminal" theme — toggled via the ◐ button */
+[data-theme="dark"] {
+  --bg: #0e1412;
+  --surface: #141c19;
+  --ink: #e6ebe7;
+  --ink-soft: #93a09a;
+  --line: #26312d;
+  --accent: #6fb3e0;
+  --up: #4cc98a;
+  --down: #e0705f;
+  --chip-bg: #1c2622;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); font-weight: 700; }
+h2 { font-size: 1.6rem; font-weight: 700; letter-spacing: 0.01em; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+
+/* Section eyebrow — mono label like a report field */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--section-gap) 1.25rem 0;
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.6rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-brand {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--ink);
+}
+.nav-links { display: flex; gap: 1.1rem; align-items: center; }
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+.nav-links a:hover { color: var(--accent); text-decoration: none; }
+.nav-links a.active { color: var(--accent); border-bottom: 1px solid var(--accent); }
+
+.theme-toggle, .print-btn {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink-soft);
+  padding: 0.15rem 0.5rem;
+  cursor: pointer;
+}
+.theme-toggle:hover, .print-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+}
+.hero-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+.hero-headline .co { color: var(--accent); }
+.hero-tagline {
+  font-family: var(--font-mono);
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin: 0.4rem 0 1.2rem;
+}
+.hero-summary p { max-width: 62ch; margin: 0 0 0.9em; }
+.hero-photo {
+  width: 148px;
+  height: 148px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.tag-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 1.1rem 0 1.4rem; }
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  background: var(--chip-bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.18rem 0.65rem;
+  color: var(--ink-soft);
+}
+.cta-row { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+.btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.45rem 1rem;
+  color: var(--accent);
+  background: none;
+  cursor: pointer;
+}
+.btn.primary { background: var(--accent); color: var(--bg); }
+.btn:hover { text-decoration: none; filter: brightness(1.1); }
+
+/* ============================================================
+   EXPERIENCE
+   ============================================================ */
+.role {
+  border-top: 1px solid var(--line);
+  padding: 1.6rem 0;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1.2rem;
+}
+.role-when {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+.role-company { font-weight: 600; color: var(--ink); font-size: 0.95rem; margin-bottom: 0.2rem; }
+.role h3 { margin-bottom: 0.6rem; }
+.role ul { margin: 0 0 1rem; padding-left: 1.1rem; }
+.role li { margin-bottom: 0.45rem; }
+
+/* Signature element: the metrics delta ladder.
+   Reads like an order-book row: label | before → after | Δ  */
+.ladder {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+.ladder-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 0.45rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+}
+.ladder-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  padding: 0.5rem 0.9rem;
+  align-items: baseline;
+  font-variant-numeric: tabular-nums;
+}
+.ladder-row + .ladder-row { border-top: 1px dashed var(--line); }
+.ladder-label { color: var(--ink); }
+.ladder-move { color: var(--ink-soft); white-space: nowrap; }
+.ladder-delta { font-weight: 600; white-space: nowrap; }
+.ladder-delta.up { color: var(--up); }
+.ladder-delta.down { color: var(--down); }
+
+/* ============================================================
+   PROJECTS
+   ============================================================ */
+.proj-tabs { display: flex; gap: 0.6rem; margin-bottom: 1.4rem; }
+.proj-tab {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: none;
+  color: var(--ink-soft);
+  padding: 0.3rem 0.9rem;
+  cursor: pointer;
+}
+.proj-tab.active { border-color: var(--accent); color: var(--accent); }
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.proj-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 1.1rem;
+}
+.proj-card h3 { margin-bottom: 0.4rem; }
+.proj-card p { color: var(--ink-soft); font-size: 0.92rem; margin: 0 0 0.8rem; }
+
+/* ============================================================
+   CREDENTIALS (education / certs / tools / languages)
+   ============================================================ */
+.cred-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2.4rem;
+}
+.cred-grid h3 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.cred-grid ul { list-style: none; margin: 0; padding: 0; }
+.cred-grid li { margin-bottom: 0.7rem; font-size: 0.92rem; }
+.cred-grid .sub { color: var(--ink-soft); font-size: 0.82rem; display: block; }
+
+/* ============================================================
+   CONTACT + FOOTER
+   ============================================================ */
+.contact-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+.site-footer {
+  max-width: var(--max-width);
+  margin: var(--section-gap) auto 0;
+  padding: 1.4rem 1.25rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 680px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-photo { order: -1; }
+  .role { grid-template-columns: 1fr; gap: 0.3rem; }
+  .ladder-row { grid-template-columns: 1fr; gap: 0.1rem; }
+}
+
+/* ============================================================
+   PRINT — the same cv.json doubles as your printable resume.
+   Browser "Print → Save as PDF" produces a clean document.
+   ============================================================ */
+@media print {
+  .site-nav, .cta-row, .proj-tabs, .site-footer, .theme-toggle, .print-btn { display: none !important; }
+  :root {
+    --bg: #ffffff; --surface: #ffffff; --ink: #000000;
+    --ink-soft: #444444; --line: #bbbbbb; --accent: #000000;
+    --up: #000000; --down: #000000;
+  }
+  body { font-size: 10.5pt; }
+  .section { padding-top: 1.2rem; }
+  .proj-card, .ladder { break-inside: avoid; }
+  a::after { content: ""; }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <meta name="description" content="Product manager portfolio and resume." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-nav" id="top">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top" id="nav-brand">·</a>
+      <nav class="nav-links">
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">◐</button>
+        <button id="print-btn" class="print-btn" title="Print / save as PDF">PDF</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- Sections are rendered from cv.json by js/app.js -->
+    <section id="hero" class="section"></section>
+    <section id="resume" class="section"></section>
+    <section id="projects" class="section"></section>
+    <section id="contact" class="section"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p id="footer-line"></p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
